@@ -12,9 +12,9 @@ export async function getStaticProps() {
 
 export default function Home({data}) {
   return (
-    <h1>{data.map(item => (
-      <h1>{item.id}</h1>
-    ))}</h1>
+    <div>{data.map(item => (
+      <h1 key={item.id}>{item.title}</h1>
+    ))}</div>
     )
  }
 
