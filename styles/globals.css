@@ -17,16 +17,3 @@ a {
 }
 
 
-.container {
-  width: 350px;
-  height: 350px;
-  background-color: black;
-  box-shadow: inset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.box {
-  color: white;
-}
