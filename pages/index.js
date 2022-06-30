@@ -13,7 +13,7 @@ export async function getStaticProps() {
 export default function Home({data}) {
   return (
     <div className="flex justify-center bg-black items-center">{data.map(item => (
-      <h1 className="bg-white shadow-lg" key={item.id}>{item.title}</h1>
+      <h1 className="shadow-lg" key={item.id}>{item.title}</h1>
     ))}</div>
     )
  }
