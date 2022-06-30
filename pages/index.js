@@ -12,8 +12,8 @@ export async function getStaticProps() {
 
 export default function Home({data}) {
   return (
-    <div>{data.map(item => (
-      <h1 key={item.id}>{item.title}</h1>
+    <div className='container'>{data.map(item => (
+      <h1 className="box" key={item.id}>{item.title}</h1>
     ))}</div>
     )
  }
