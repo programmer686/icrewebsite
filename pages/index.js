@@ -1,5 +1,11 @@
 import prisma from '../lib/prisma'
-import Image from "next/image"
+
+
+
+
+
+
+
 export async function getStaticProps() {
   const movies = await prisma.user.findMany()
   return {
@@ -17,12 +23,10 @@ export default function Home({data}) {
       <h1>{item.title}</h1>
       
     })}</div>
-    <Image 
-    src="/podcast.jpg"
-    alt="Galaxy"
-    width={1000}
-    height={750}/>
+    
     </>
   )
 
   }
+
+  export async function getStaticProps()
