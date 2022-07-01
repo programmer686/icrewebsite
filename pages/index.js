@@ -1,5 +1,5 @@
 import prisma from '../lib/prisma'
-
+import Image from "next/image"
 export async function getStaticProps() {
   const movies = await prisma.user.findMany()
   return {
@@ -12,14 +12,17 @@ export async function getStaticProps() {
 
 export default function Home({data}) {
   return (
-    
-    <div className="flex justify-center w-screen h-screen bg-black items-center">{data.map(item => (
-      <h1 className="shadow-lg" key={item.id}>{item.title}</h1>
-    ))}</div>
-    )
- }
+    <>
+    <div>{data.map(item =>{
+      <h1>{item.title}</h1>
+      
+    })}</div>
+    <Image 
+    src="/podcast.jpg"
+    alt="Galaxy"
+    width={1000}
+    height={750}/>
+    </>
+  )
 
-
-
-
-
+  }
