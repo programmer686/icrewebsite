@@ -6,23 +6,20 @@ import Image from 'next/image';
 
 
 export default function Home({images}) {
-  
-  const photo = images.map(image => {
-   
-    return (
-      <Image
-      src={image.image}
-      alt=""
-      width={350}
-      height={350}
-      key={image.id} />
-    )
-  })
 
   return (
     <div className='bg-black w-auto h-auto p-10 flex justify-center items-center flex-col'>
       <h1 className='text-white text-[50px] text-center'>Cloudinary<br/> Alojamiento gratuito en la nube para photos y imagenes<br/>es gratis hasta 10GB</h1>
-      <div className=''>{photo}</div>
+      <div className=''>{images.map(image => {
+      return (
+     <Image
+     src={image.image}
+     alt=""
+     width={350}
+     height={350}
+     key={image.id} />
+   )
+ })}</div>
     </div>
         
         
