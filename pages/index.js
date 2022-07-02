@@ -6,7 +6,7 @@ export default function Home({images}) {
 
   return (
     <div className="bg-black w-screen h-screen flex justify-center items-center">
-    <div className="bg-white w-25 h-25"></div>
+      <h1 className="bg-white text-lg">Hello World</h1>
     </div>
   )
   }
