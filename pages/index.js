@@ -1,12 +1,13 @@
 import Image from "next/image"
-
+import Navbar from "../components/Navbar"
 
 
 export default function Home({images}) {
 
   return (
-    <div className="bg-black w-screen h-screen flex justify-center items-center">
-      <h1 className="bg-white text-lg">Hello World</h1>
+    <div className=" w-screen h-screen flex justify-center items-center">
+      <Navbar/>
+      
     </div>
   )
   }
